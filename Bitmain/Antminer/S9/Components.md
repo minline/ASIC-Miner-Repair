@@ -9,7 +9,7 @@
 
 #### [QN3109M6N](./Assets/QN3109M6N.pdf)
 
-<img src="./Assets/QN3109M6N.jpeg" width="200px">
+<img src="./Assets/QN3109M6N.png" width="200px">
 
 ## PIC
 
