@@ -2,6 +2,10 @@
 
 ## [Components](./Components.md)
 
+## Repair Guides
+
+- [Repair Guide](./Repair-Guide.pdf)
+
 ### Temperature Sensors
 
 <img src="./Temperature-Sensors.jpg" width="600px">
