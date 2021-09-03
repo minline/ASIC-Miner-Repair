@@ -13,3 +13,5 @@
 ### [Antminer S17Plus](./Bitmain/Antminer/S17Plus/README.md)
 
 ### [Antminer T17](./Bitmain/Antminer/T17/README.md)
+
+### [Antminer L3Plus](./Bitmain/Antminer/L3Plus/README.md)
