@@ -2,8 +2,8 @@
 
 ## Testing Mosfets
 
-- https://mayohardware.blogspot.com/2011/02/tips-on-testing-mosfets.html
-- https://www.utm.edu/staff/leeb/mostest.htm
+- [Tips on Testing MOSFETs](https://mayohardware.blogspot.com/2011/02/tips-on-testing-mosfets.html)
+- [Testing a MosFet](https://www.utm.edu/staff/leeb/mostest.htm)
 
 ## Diode Resistance Values
 
