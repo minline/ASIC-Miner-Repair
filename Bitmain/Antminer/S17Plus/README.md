@@ -4,4 +4,4 @@
 
 ### Temperature Sensors
 
-<img src="./Temperature-Sensors.jpg" width="200px">
+<img src="./Temperature-Sensors.jpg">

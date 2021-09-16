@@ -14,4 +14,4 @@
 
 The control board has the chain numbers as `J1`, `J2`, `J3`, however the firmware starts counting from zero, `Chain[0]`, `Chain[1]`, `Chain[2]`
 
-<img src="./Assets/Control-Board-Chains.jpg" width="200px">
+<img src="./Assets/Control-Board-Chains.jpg">

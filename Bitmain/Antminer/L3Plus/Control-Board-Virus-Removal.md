@@ -6,6 +6,6 @@
 
 ### Short circuit the two pins on the control board as shown in the image
 
-<img src="./Control-Board-Virus-Removal-Short-Circuit.png" width="600px">
+<img src="./Control-Board-Virus-Removal-Short-Circuit.png">
 
 ### Insert the flashed MicroSD card, turn on the power, wait for about 30 seconds, once the indicator lights start blinking, the flash was successful, turn off the control board, remove the short circuit wire, now flash the board with your desired firmware.
