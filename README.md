@@ -17,3 +17,7 @@
 ### [Antminer L3Plus](./Bitmain/Antminer/L3Plus/README.md)
 
 ### [Antminer Z11](./Bitmain/Antminer/Z11/README.md)
+
+#### Looking to get your ASICs repaired?
+
+- Talk to [East Coast Mining](https://eastcoastmining.com/)
