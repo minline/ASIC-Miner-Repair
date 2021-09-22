@@ -1,6 +1,6 @@
 # S9
 
-## [Hashboard Test Points](//Assets/Bitmain-Antminer-S9-Hashboard-Test-Points.pdf)
+## [Hashboard Test Points](/Assets/Bitmain-Antminer-S9-Hashboard-Test-Points.pdf)
 
 ## [Components](./Components.md)
 
