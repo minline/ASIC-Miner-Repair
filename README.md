@@ -1,4 +1,4 @@
-# ASIC Miner Repair Guides, Schematics, Etc
+# [ASIC Miner Repair Guides, Schematics, Tools](https://eastcoastmining.repair)
 
 ## [Testing Resources](Testing.md)
 
