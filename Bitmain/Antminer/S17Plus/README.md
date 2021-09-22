@@ -4,4 +4,4 @@
 
 ### Temperature Sensors
 
-<img src="./Temperature-Sensors.jpg">
+<img src="Assets/Bitmain-Antminer-S17Plus-Temperature-Sensors.jpg">
