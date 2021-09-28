@@ -1,5 +1,7 @@
 # [ASIC Miner Repair Guides, Schematics, Tools](https://eastcoastmining.repair)
 
+## [Getting Started](Getting-Started.md)
+
 ## [Testing Resources](Testing.md)
 
 ## ASICs
