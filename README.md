@@ -6,6 +6,8 @@
 
 ## [Tools](Tools.md)
 
+## [FAQ](FAQ.md)
+
 ## ASICs
 
 ### [Antminer S9](Bitmain/Antminer/S9/README.md)
