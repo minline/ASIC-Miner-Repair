@@ -4,6 +4,8 @@
 
 ## [Testing Resources](Testing.md)
 
+## [Tools](Tools.md)
+
 ## ASICs
 
 ### [Antminer S9](Bitmain/Antminer/S9/README.md)
