@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://eastcoastmining.repair"
+base_url = "/"
 title = "ASIC Miner Repair"
 description = "Repair Guides, Schematics, Tools, Etc"
 
