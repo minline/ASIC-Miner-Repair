@@ -126,13 +126,13 @@ include_content = true
 #     [translations]
 #     title = "Un titre"
 #
-[translations]
+# [translations]
 
 # Additional languages definition
 # You can define language specific config values and translations:
 # title, description, generate_feed, feed_filename, taxonomies, build_search_index
 # as well as its own search configuration and translations (see above for details on those)
-[languages]
+# [languages]
 # For example
 # [languages.fr]
 # title = "Mon blog"
@@ -151,4 +151,4 @@ include_content = true
 #
 # author value will be available using {{ config.extra.author }} in templates
 #
-[extra]
+# [extra]
