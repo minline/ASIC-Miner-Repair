@@ -2,6 +2,8 @@
 
 ## [Getting Started](Getting-Started.md)
 
+## [General Troubleshooting Guide](General-Troubleshooting-Guide.md)
+
 ## [Testing Resources](Testing.md)
 
 ## [Tools](Tools.md)
