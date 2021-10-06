@@ -14,11 +14,11 @@ Using this with the test bench will allow you to get the report on PUTTY like an
 
 ## Microscope
 
-<img src="/Assets/Amscope-Microscope.jpeg" />
+<img src="/Assets/Amscope-Microscope.png" />
 
 We have a microscope used to inspect small resistors and leads; we have an AmScope with a camera, but you can find cheaper digital ones that work well enough.
 
-<img src="/Assets/Digital-Microscope.jpeg" />
+<img src="/Assets/Digital-Microscope.png" />
 
 ## Soldering Tools
 
