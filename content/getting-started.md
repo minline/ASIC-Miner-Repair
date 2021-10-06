@@ -1,3 +1,7 @@
++++
+title = "Getting Started"
++++
+
 # Resources To Get Started With ASIC Diagnostics and Repair
 
 ## Introduction Video (You do not need a test fixture to get started)

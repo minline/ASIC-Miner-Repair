@@ -1,4 +1,8 @@
-# Tools for diagnostics and repair
++++
+title = "Tools"
++++
+
+# Tools For Diagnostics And Repair
 
 ## [Bitmain Test Fixture](https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=212) vs [Asic Repair Tester](https://tester.asic.repair/en) ("Russian" Tester)
 

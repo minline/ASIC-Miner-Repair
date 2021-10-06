@@ -1,10 +1,14 @@
++++
+title = "General Troubleshooting Guide"
++++
+
 # General Troubleshooting Guide
 
 ## Equipment
 
 ### DSD TECH SH-U09C5 USB to TTL UART
 
-<img src="/Assets/DSD-TECH-SH-U09C5.png" />
+<img src="/DSD-TECH-SH-U09C5.png" />
 
 On the pictured cable (upside down in this pic), you will only use White, Gray and Purple leads, tape (or glue) them together with White in the center, and the other two on the sides; the other three are unused.
 You can either clip the connections of the WGP wires and solder them directly to the board or solder in leads like the ones pictured so you can disconnect from the board. We prefer the connection method.
@@ -14,11 +18,11 @@ Using this with the test bench will allow you to get the report on PUTTY like an
 
 ## Microscope
 
-<img src="/Assets/Amscope-Microscope.png" />
+<img src="/Amscope-Microscope.png" />
 
 We have a microscope used to inspect small resistors and leads; we have an AmScope with a camera, but you can find cheaper digital ones that work well enough.
 
-<img src="/Assets/Digital-Microscope.png" />
+<img src="/Digital-Microscope.png" />
 
 ## Soldering Tools
 
