@@ -27,7 +27,7 @@ build_search_index = true
 highlight_code = true
 
 # When set to "true", a feed is automatically generated.
-generate_feed = false
+generate_feed = true
 
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
