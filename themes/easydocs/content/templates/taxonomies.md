@@ -27,7 +27,6 @@ feed: Bool;
 lang: String;
 ```
 
-
 ### Taxonomy list (`list.html`)
 
 This template is never paginated and therefore gets the following variables in all cases.
@@ -47,8 +46,8 @@ terms: Array<TaxonomyTerm>;
 lang: String;
 ```
 
-
 ### Single term (`single.html`)
+
 ```ts
 // The site config
 config: Config;

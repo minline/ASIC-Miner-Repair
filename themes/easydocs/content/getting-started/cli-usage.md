@@ -59,6 +59,7 @@ $ zola --config config.staging.toml build
 ```
 
 You can also process a project from a different directory with the `root` flag. If building a project 'out-of-tree' with the `root` flag, you may want to combine it with the `output-dir` flag. (Note that like `config`, the position is important):
+
 ```bash
 $ zola --root /path/to/project build
 ```
@@ -96,7 +97,6 @@ a hard refresh if possible.
 Some changes cannot be handled automatically and thus live reload may not always work. If you
 fail to see your change or get an error, try restarting `zola serve`.
 
-
 You can also point to a config file other than `config.toml` like so (note that the position of the `config` option is important):
 
 ```bash
@@ -117,7 +117,7 @@ By default, drafts are not loaded. If you wish to include them, pass the `--draf
 
 Colored output is used if your terminal supports it.
 
-*Note*: coloring is automatically disabled when the output is redirected to a pipe or a file (i.e., when the standard output is not a TTY).
+_Note_: coloring is automatically disabled when the output is redirected to a pipe or a file (i.e., when the standard output is not a TTY).
 
 You can disable this behavior by exporting one of the following two environment variables:
 

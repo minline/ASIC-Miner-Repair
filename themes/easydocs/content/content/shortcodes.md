@@ -10,8 +10,8 @@ try [Tera macros](https://tera.netlify.com/docs#macros).
 
 Broadly speaking, Zola's shortcodes cover two distinct use cases:
 
-* Inject more complex HTML: Markdown is good for writing, but it isn't great when you need add inline HTML or styling.
-* Ease repetitive data based tasks: when you have [external data](@/templates/overview.md#load-data) that you
+- Inject more complex HTML: Markdown is good for writing, but it isn't great when you need add inline HTML or styling.
+- Ease repetitive data based tasks: when you have [external data](@/templates/overview.md#load-data) that you
   want to display in your page's body.
 
 The latter may also be solved by writing HTML, however Zola allows the use of Markdown based shortcodes which end in `.md`
@@ -19,6 +19,7 @@ rather than `.html`. This may be particularly useful if you want to include head
 [table of contents](@/content/table-of-contents.md).
 
 ## Writing a shortcode
+
 Let's write a shortcode to embed YouTube videos as an example.
 In a file called `youtube.html` in the `templates/shortcodes` directory, paste the
 following:
@@ -108,6 +109,7 @@ Note that if you want to have some content that looks like a shortcode but not h
 you will need to escape it by using `{{/*` and `*/}}` instead of `{{` and `}}`.
 
 ### Shortcodes with body
+
 Let's imagine that we have the following shortcode `quote.html` template:
 
 ```jinja2
@@ -159,6 +161,7 @@ simply place a `{shortcode_name}.html` file in the `templates/shortcodes` direct
 use that instead.
 
 ### YouTube
+
 Embed a responsive player for a YouTube video.
 
 The arguments are:
@@ -182,6 +185,7 @@ Result example:
 {{ youtube(id="dQw4w9WgXcQ") }}
 
 ### Vimeo
+
 Embed a player for a Vimeo video.
 
 The arguments are:
@@ -202,6 +206,7 @@ Result example:
 {{ vimeo(id="124313553") }}
 
 ### Streamable
+
 Embed a player for a Streamable video.
 
 The arguments are:
@@ -222,6 +227,7 @@ Result example:
 {{ streamable(id="92ok4") }}
 
 ### Gist
+
 Embed a [Github gist](https://gist.github.com).
 
 The arguments are:

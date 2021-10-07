@@ -10,11 +10,9 @@ Once this is done, Zola will automatically highlight all code blocks
 in your content. A code block in Markdown looks like the following:
 
 ````md
-
 ```rust
 let highlight = true;
 ```
-
 ````
 
 You can replace `rust` with another language or not put anything to get the text
@@ -146,7 +144,7 @@ Here is a full list of supported languages and their short names:
 ```
 
 Note: due to some issues with the JavaScript syntax, the TypeScript syntax will be used instead.
-If 
+If
 
 If you want to highlight a language not on this list, please open an issue or a pull request on the [Zola repo](https://github.com/getzola/zola).
 Alternatively, the `extra_syntaxes` configuration option can be used to add additional syntax files.

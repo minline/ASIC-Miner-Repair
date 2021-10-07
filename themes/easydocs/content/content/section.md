@@ -4,13 +4,13 @@ weight = 20
 +++
 
 A section is created whenever a directory (or subdirectory) in the `content` section contains an
-`_index.md` file.  If a directory does not contain an `_index.md` file, no section will be
+`_index.md` file. If a directory does not contain an `_index.md` file, no section will be
 created, but Markdown files within that directory will still create pages (known as orphan pages).
 
 The index page (i.e., the page displayed when a user browses to your `base_url`) is a section,
 which is created whether or not you add an `_index.md` file at the root of your `content` directory.
 If you do not create an `_index.md` file in your content directory, this main content section will
-not have any content or metadata.  If you would like to add content or metadata, you can add an
+not have any content or metadata. If you would like to add content or metadata, you can add an
 `_index.md` file at the root of the `content` directory and edit it just as you would edit any other
 `_index.md` file; your `index.html` template will then have access to that content and metadata.
 
@@ -19,11 +19,12 @@ Any non-Markdown file in a section directory is added to the `assets` collection
 Markdown file using relative links.
 
 ## Drafting
-Just like pages sections can be drafted by setting the `draft` option in the front matter. By default this is not done. When a section is drafted it's descendants like pages, subsections and assets will not be processed unless the `--drafts` flag is passed. Note that even pages that don't have a `draft` status will not be processed if one of their parent sections is drafted. 
+
+Just like pages sections can be drafted by setting the `draft` option in the front matter. By default this is not done. When a section is drafted it's descendants like pages, subsections and assets will not be processed unless the `--drafts` flag is passed. Note that even pages that don't have a `draft` status will not be processed if one of their parent sections is drafted.
 
 ## Front matter
 
-The `_index.md` file within a directory defines the content and metadata for that section.  To set
+The `_index.md` file within a directory defines the content and metadata for that section. To set
 the metadata, add front matter to the file.
 
 The TOML front matter is a set of metadata embedded in a file at the beginning of the file enclosed by triple pluses (`+++`).
@@ -38,7 +39,6 @@ legacy content. In this case the embedded metadata must be enclosed by triple mi
 
 Here is an example `_index.md` with all the available variables. The values provided below are the
 default values.
-
 
 ```toml
 title = ""
@@ -91,7 +91,7 @@ render = true
 # Useful for the same reason as `render` but when you don't want a 404 when
 # landing on the root section page.
 # Example: redirect_to = "documentation/content/overview"
-redirect_to = 
+redirect_to =
 
 # If set to "true", the section will pass its pages on to the parent section. Defaults to `false`.
 # Useful when the section shouldn't split up the parent section, like
@@ -124,10 +124,11 @@ You can also change the pagination path (the word displayed while paginated in t
 by setting the `paginate_path` variable, which defaults to `page`.
 
 ## Sorting
+
 It is very common for Zola templates to iterate over pages or sections
-to display all pages/sections in a given directory.  Consider a very simple
+to display all pages/sections in a given directory. Consider a very simple
 example: a `blog` directory with three files: `blog/Post_1.md`,
-`blog/Post_2.md` and `blog/Post_3.md`.  To iterate over these posts and
+`blog/Post_2.md` and `blog/Post_3.md`. To iterate over these posts and
 create a list of links to the posts, a simple template might look like this:
 
 ```j2
@@ -138,8 +139,8 @@ create a list of links to the posts, a simple template might look like this:
 
 This would iterate over the posts in the order specified
 by the `sort_by` variable set in the `_index.md` page for the corresponding
-section.  The `sort_by` variable can be given one of three values: `date`,
-`weight` or `none`.  If `sort_by` is not set, the pages will be
+section. The `sort_by` variable can be given one of three values: `date`,
+`weight` or `none`. If `sort_by` is not set, the pages will be
 sorted in the `none` order, which is not intended for sorted content.
 
 Any page that is missing the data it needs to be sorted will be ignored and
@@ -151,32 +152,37 @@ If several pages have the same date/weight/order, their permalink will be used
 to break the tie based on alphabetical order.
 
 ## Sorting pages
+
 The `sort_by` front-matter variable can have the following values:
 
 ### `date`
+
 This will sort all pages by their `date` field, from the most recent (at the
-top of the list) to the oldest (at the bottom of the list).  Each page will
+top of the list) to the oldest (at the bottom of the list). Each page will
 get `page.earlier` and `page.later` variables that contain the pages with
 earlier and later dates, respectively.
 
 ### `weight`
+
 This will be sort all pages by their `weight` field, from lightest weight
-(at the top of the list) to heaviest (at the bottom of the list).  Each
+(at the top of the list) to heaviest (at the bottom of the list). Each
 page gets `page.lighter` and `page.heavier` variables that contain the
 pages with lighter and heavier weights, respectively.
 
 ### Reversed sorting
+
 When iterating through pages, you may wish to use the Tera `reverse` filter,
-which reverses the order of the pages.  For example, after using the `reverse` filter,
+which reverses the order of the pages. For example, after using the `reverse` filter,
 pages sorted by weight will be sorted from lightest (at the top) to heaviest
 (at the bottom); pages sorted by date will be sorted from oldest (at the top)
 to newest (at the bottom).
 
 `reverse` has no effect on `page.later`/`page.earlier` or `page.heavier`/`page.lighter`.
 
-If the section is paginated the `paginate_reversed=true` in the front matter of the relevant section should be set instead of using the filter. 
+If the section is paginated the `paginate_reversed=true` in the front matter of the relevant section should be set instead of using the filter.
 
 ## Sorting subsections
+
 Sorting sections is a bit less flexible: sections can only be sorted by `weight`,
 and do not have variables that point to the heavier/lighter sections.
 
@@ -188,5 +194,5 @@ the `reverse` filter reverses this order.
 equally weighted sections. Thus, if the `weight` variable for your section is not set (or if it
 is set in a way that produces ties), then your sections will be sorted in
 **random** order. Moreover, that order is determined at build time and will
-change with each site rebuild.  Thus, if there is any chance that you will
+change with each site rebuild. Thus, if there is any chance that you will
 iterate over your sections, you should always assign them a weight.

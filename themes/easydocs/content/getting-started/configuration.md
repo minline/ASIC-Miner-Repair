@@ -12,6 +12,7 @@ If you are not familiar with TOML, have a look at [the TOML spec](https://github
 ⚠️ If you add keys to your `config.toml`, you must pay attention to which TOML section it belongs to.
 
 Here are the current `config.toml` sections:
+
 1. main (unnamed)
 2. link_checker
 3. slugify
@@ -216,8 +217,8 @@ Zola currently has the following highlight themes available:
 - [nyx-bold](https://github.com/GalAster/vscode-theme-nyx)
 - [one-dark](https://github.com/andresmichel/one-dark-theme)
 - [OneHalf](https://github.com/sonph/onehalf)
-- [solarized-dark](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(dark))
-- [solarized-light](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(light))
+- [solarized-dark](<https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(dark)>)
+- [solarized-light](<https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(light)>)
 - [subway-madrid](https://github.com/idleberg/Subway.tmTheme)
 - [subway-moscow](https://github.com/idleberg/Subway.tmTheme)
 - [Tomorrow](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Tomorrow)

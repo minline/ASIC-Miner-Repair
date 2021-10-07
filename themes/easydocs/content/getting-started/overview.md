@@ -34,7 +34,7 @@ You will be asked a few questions.
 > Do you want to build a search index of the content? [y/N]:
 ```
 
- For our blog, let's accept the default values (i.e., press Enter for each question). We now have a `myblog` directory with the following structure:
+For our blog, let's accept the default values (i.e., press Enter for each question). We now have a `myblog` directory with the following structure:
 
 ```bash
 ├── config.toml
@@ -64,35 +64,30 @@ Let's make a home page. To do this, let's first create a `base.html` file inside
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MyBlog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>MyBlog</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-</head>
-
-<body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
-    </div>
-  </section>
-</body>
-
+  <body>
+    <section class="section">
+      <div class="container">{% block content %} {% endblock %}</div>
+    </section>
+  </body>
 </html>
-```  
+```
 
 Now, let's create an `index.html` file inside the `templates` directory.
 
 ```html
-{% extends "base.html" %}
-
-{% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
+{% extends "base.html" %} {% block content %}
+<h1 class="title">This is my blog made with Zola.</h1>
 {% endblock content %}
-```  
+```
 
 This tells Zola that `index.html` extends our `base.html` file and replaces the block called "content" with the text between the `{% block content %}` and `{% endblock content %}` tags.
 
@@ -119,23 +114,19 @@ page_template = "blog-page.html"
 
 > Note that although no variables are mandatory, the opening and closing `+++` are required.
 
-* *sort_by = "date"* tells Zola to use the date to order our section pages (more on pages below). 
-* *template = "blog.html"* tells Zola to use `blog.html` in the `templates` directory as the template for listing the Markdown files in this section. 
-* *page_template = "blog-page.html"* tells Zola to use `blog-page.html` in the `templates` directory as the template for individual Markdown files. 
+- _sort_by = "date"_ tells Zola to use the date to order our section pages (more on pages below).
+- _template = "blog.html"_ tells Zola to use `blog.html` in the `templates` directory as the template for listing the Markdown files in this section.
+- _page_template = "blog-page.html"_ tells Zola to use `blog-page.html` in the `templates` directory as the template for individual Markdown files.
 
-For a full list of section variables, please see the [section](@/content/section.md) documentation. We will use *title = "List of blog posts"* in a template (see below).
+For a full list of section variables, please see the [section](@/content/section.md) documentation. We will use _title = "List of blog posts"_ in a template (see below).
 
 ### Templates
 
 Let's now create some more templates. In the `templates` directory, create a `blog.html` file with the following contents:
 
 ```html
-{% extends "base.html" %}
-
-{% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
+{% extends "base.html" %} {% block content %}
+<h1 class="title">{{ section.title }}</h1>
 <ul>
   {% for page in section.pages %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
@@ -144,7 +135,7 @@ Let's now create some more templates. In the `templates` directory, create a `bl
 {% endblock content %}
 ```
 
-As done by `index.html`, `blog.html` extends `base.html`, but this time we want to list the blog posts. The *title* we set in the `_index.md` file above is available to us as `{{ section.title }}`. In the list below the title, we loop through all the pages in our section (`blog` directory) and output the page title and URL using `{{ page.title }}` and `{{ page.permalink | safe }}`, respectively. We use the `| safe` filter because the permalink doesn't need to be HTML escaped (escaping would cause `/` to render as `&#x2F;`).
+As done by `index.html`, `blog.html` extends `base.html`, but this time we want to list the blog posts. The _title_ we set in the `_index.md` file above is available to us as `{{ section.title }}`. In the list below the title, we loop through all the pages in our section (`blog` directory) and output the page title and URL using `{{ page.title }}` and `{{ page.permalink | safe }}`, respectively. We use the `| safe` filter because the permalink doesn't need to be HTML escaped (escaping would cause `/` to render as `&#x2F;`).
 
 If you go to <http://127.0.0.1:1111/blog/>, you will see the section page for `blog`. The list is empty because we don't have any blog posts. Let's fix that now.
 
@@ -161,20 +152,15 @@ date = 2019-11-27
 This is my first blog post.
 ```
 
-The *title* and *date* will be available to us in the `blog-page.html` template as `{{ page.title }}` and `{{ page.date }}`, respectively. All text below the closing `+++` will be available to us as `{{ page.content }}`.
+The _title_ and _date_ will be available to us in the `blog-page.html` template as `{{ page.title }}` and `{{ page.date }}`, respectively. All text below the closing `+++` will be available to us as `{{ page.content }}`.
 
 We now need to make the `blog-page.html` template. In the `templates` directory, create this file with the contents:
 
 ```html
-{% extends "base.html" %}
-
-{% block content %}
-<h1 class="title">
-  {{ page.title }}
-</h1>
+{% extends "base.html" %} {% block content %}
+<h1 class="title">{{ page.title }}</h1>
 <p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
-{% endblock content %}
+{{ page.content | safe }} {% endblock content %}
 ```
 
 > Note the `| safe` filter for `{{ page.content }}`.
@@ -190,19 +176,15 @@ date = 2019-11-28
 This is my second blog post.
 ```
 
-Back at <http://127.0.0.1:1111/blog/>, our second post shows up on top of the list because it's newer than the first post and we had set *sort_by = "date"* in our `_index.md` file. As a final step, let's modify our home page to link to our blog posts.
+Back at <http://127.0.0.1:1111/blog/>, our second post shows up on top of the list because it's newer than the first post and we had set _sort_by = "date"_ in our `_index.md` file. As a final step, let's modify our home page to link to our blog posts.
 
 The `index.html` file inside the `templates` directory should be:
 
 ```html
-{% extends "base.html" %}
-
-{% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
+{% extends "base.html" %} {% block content %}
+<h1 class="title">This is my blog made with Zola.</h1>
 <p>Click <a href="/blog/">here</a> to see my posts.</p>
 {% endblock content %}
-```  
+```
 
 This has been a quick overview of Zola. You can now dive into the rest of the documentation.

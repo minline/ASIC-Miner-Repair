@@ -13,7 +13,6 @@ For example, assuming that the username is `john`, you have to create a project 
 
 Under your group `websites`, you created a project called `websites.gitlab.io`. Your project’s URL will be `https://gitlab.com/websites/websites.gitlab.io`. Once you enable GitLab Pages for your project, your website will be published under `https://websites.gitlab.io`.
 
-
 This guide assumes that your Zola project is located in the root of your repository.
 
 ## Ensuring that the CI runner can access your theme
@@ -26,6 +25,7 @@ $ git submodule add {THEME_URL} themes/{THEME_NAME}
 ```
 
 For example, this could look like:
+
 ```shell
 $ git submodule add https://github.com/getzola/hyde.git themes/hyde
 ```
@@ -40,7 +40,7 @@ To do this, create a file called `.gitlab-ci.yml` in the root directory of your 
 image: alpine:latest
 variables:
   # This variable will ensure that the CI runner pulls in your theme from the submodule
-  GIT_SUBMODULE_STRATEGY: recursive  
+  GIT_SUBMODULE_STRATEGY: recursive
   # Specify the zola version you want to use here
   ZOLA_VERSION: "v0.12.0"
 
@@ -50,14 +50,14 @@ pages:
     - apk add --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ zola
     # Execute zola build
     - zola build
-    
+
   artifacts:
     paths:
       # Path of our artifacts
       - public
-      
+
   # This config will only publish changes that are pushed on the master branch
-  only: 
+  only:
     - master
 ```
 
@@ -65,7 +65,7 @@ Push this new file and ... Tada! You're done! If you navigate to `settings > pag
 something like this:
 
 > Congratulations! Your pages are served under:  
-https://john.gitlab.io
+> https://john.gitlab.io
 
-More information on the process to host on GitLab pages and additional information like using a custom domain is documented 
+More information on the process to host on GitLab pages and additional information like using a custom domain is documented
 [in this GitLab blog post](https://about.gitlab.com/2016/04/07/gitlab-pages-setup/).
