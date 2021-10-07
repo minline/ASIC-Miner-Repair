@@ -7,7 +7,14 @@
         <link rel="icon" href="{{ config.extra.favicon | safe }}">
       {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-        <title>{% block title %}{{ config.title }}{% endblock title %}</title> 
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+        {% if config.build_search_index %}
+        {# Preload Assets #}
+        <link rel="preload" as="script" href="{{ get_url(path="elasticlunr.min.js") | safe }}" defer>
+        <link rel="preload" as="script" href="{{ get_url(path="search_index.en.js") | safe }}" defer>
+        <link rel="preload" as="script" href="{{ get_url(path="js.js") | safe }}" defer>
+        {% endif %}
     </head>
     <body>
 
@@ -37,7 +44,7 @@
             <img src="{{ config.extra.logo | safe }}" alt="" />
                 </a>
             {% endif %}
-            
+
           {% else %}
             <h1><a href="{{ config.base_url }}">{{ config.title }}</a></h1>
           {% endif %}
@@ -45,26 +52,26 @@
           {% if config.extra.release %}
             <div id="release"></div>
           {% endif %}
-  
+
   <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
     <div id="trees">
-        {% set section = get_section(path="_index.md") %}       
+        {% set section = get_section(path="_index.md") %}
             {% for p in section.subsections %}
-                {% set subsection = get_section(path=p) %} 
-            
- 
-        <input class="tree-toggle" type="checkbox" id="{{ subsection.title | slugify  }}" 
+                {% set subsection = get_section(path=p) %}
+
+
+        <input class="tree-toggle" type="checkbox" id="{{ subsection.title | slugify  }}"
         {% if current_path is starting_with(subsection.path) %}checked{% endif %} />
         <label class="tree-toggle-label" for="{{ subsection.title | slugify  }}">{{ subsection.title }}</label>
-                        
+
         <ul class="subtree">
                 {% for page in subsection.pages %}
                                 <li {% if current_path == page.path %}class="active"{% endif %}>
                                     <a href="{{page.permalink | safe }}">{{page.title}}</a>
                                 </li>
 
-                            {% if current_path == page.path %} 
-                                
+                            {% if current_path == page.path %}
+
   {% set_global header_count = 0 %}
   {% for h2 in page.toc %}
     {% set_global header_count = header_count + 1 %}
@@ -81,7 +88,7 @@
         {% for h2 in page.toc %}
           <li><a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
           {% if h2.children %}
-          <ul>        
+          <ul>
             {% for h3 in h2.children %}
             <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
             {% endfor %}
@@ -92,17 +99,17 @@
       </ul>
     {% endif %}
 
-                        
+
     {% endif %}
     {% endfor %}
-    </ul>         
+    </ul>
     {% endfor %}
-    </div>    
+    </div>
   </nav>
     {% endblock nav %}
 
 <article>
- 
+
   {% if config.build_search_index %}
   <div id="on_right">
     <span id="search-ico" class="ms-Icon--Search"></span>
@@ -114,7 +121,7 @@
                 <ul class="search-results__items"></ul>
               </div>
     </div>
-  {% endif %}       
+  {% endif %}
 
   <div id="wrap">
     {% block content %}
