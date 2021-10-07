@@ -1,5 +1,6 @@
 +++
 title = "ASIC Miner Repair"
+sort_by = "title"
 +++
 
 ## [Getting Started](@/getting-started.md)
