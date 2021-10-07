@@ -1,0 +1,15 @@
+{% set antminerImage = resize_image(path="/antminer-icon-1.png", width=600, height=600, op="fit", format="auto") %}
+<div id="antminerImage">
+  <img src="{{ antminerImage.url }}" />
+  {# <img src="/antminer-icon-1.png" /> #}
+</div>
+
+<style>
+  #antminerImage {
+    width: 100%;
+    height: 100%;
+  }
+  #antminerImage img {
+    object-fit: contain;
+  }
+</style>

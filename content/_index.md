@@ -3,6 +3,8 @@ title = "ASIC Miner Repair"
 sort_by = "title"
 +++
 
+{{ antminerLogo() }}
+
 ## [Getting Started](@/getting-started.md)
 
 ## [General Troubleshooting Guide](@/general-troubleshooting-guide.md)
