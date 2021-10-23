@@ -15,6 +15,8 @@ sort_by = "title"
 
 ## [FAQ](@/faq.md)
 
+## [Reference](@/reference.md)
+
 #### Looking to get your ASICs repaired?
 
 - Talk to [East Coast Mining](https://eastcoastmining.com/)
