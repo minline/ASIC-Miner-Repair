@@ -4,6 +4,16 @@ title = "Reference"
 
 # Reference
 
+## Antminer ASIC Datasheet
+
+### [BM1380](/BM1380_Datasheet_v1.0.pdf)
+
+### [BM1382](/BM1382_Datasheet_v3.0.pdf)
+
+### [BM1384](/BM1384_Datasheet_v2.1.pdf)
+
+### [BM1385](/BM1385_Datasheet_v2.0.pdf)
+
 ## Antminer ASIC models
 
 | Chip Model     | Miner Model                  |
