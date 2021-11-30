@@ -4,6 +4,10 @@ title = "Antminer S17Pro"
 
 # Antminer S17Pro
 
+## Repair Guides
+
+- [Repair Guide](/Bitmain-Antminer-S17-Repair-Guide.pdf)
+
 ## Components
 
 ### PIC
