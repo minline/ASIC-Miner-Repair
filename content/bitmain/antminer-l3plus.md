@@ -4,6 +4,10 @@ title = "Antminer L3plus"
 
 # Antminer L3Plus
 
+## Repair Guides
+
+- [Repair Guide](/Bitmain-Antminer-L3plus-Repair-Guide.pdf)
+
 ## Control Board Virus Removal
 
 Download the [201904231425-L3++-SD-recover-NAND.zip](/201904231425-L3++-SD-recover-NAND.zip) file, and extract the zip.
