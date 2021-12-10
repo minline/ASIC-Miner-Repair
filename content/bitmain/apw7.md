@@ -4,6 +4,6 @@ title = "APW7"
 
 # APW7
 
-## Resources
+## Repair Guide
 
 - [Repair Guide](/Bitmain-APW7-Repair-Guide.pdf)
