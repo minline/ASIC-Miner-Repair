@@ -8,3 +8,7 @@ title = "APW12"
 
 - [Official Manual](/Bitmain-APW12-Manual.pdf)
 - [Bitmain APW12 Upgrade](/Bitmain-APW12-Upgrade.pdf)
+
+## Repair Guide
+
+- [Repair Guide](/Bitmain-APW12-Repair-Guide.pdf)
