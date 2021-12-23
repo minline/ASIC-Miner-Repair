@@ -18,4 +18,5 @@ title = "Antminer S17Pro"
 
 ## UART Signals
 
-<img src="/Bitmain-Antminer-S17-Signals-Test-Points.jpg">
+<!-- <img src="https://siasky.net/AAB-yN-ZaHxRBr3XaUMYslot0yZ4REU3DX6PFzxsWi00mw"> -->
+<div id="seadragon-viewer" style="width:1000px; height:500px;"></div>

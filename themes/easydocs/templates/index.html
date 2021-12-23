@@ -138,9 +138,19 @@
   <script type="text/javascript" src="{{ get_url(path="js.js") | safe }}" defer></script>
   {% endif %}
 
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3eaabcaf12d64010ae87a0265ecb100f"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <!-- Custom Code -->
+  <script src="https://cdn.jsdelivr.net/npm/openseadragon@3.0.0/build/openseadragon/openseadragon.min.js"></script>
+  <script>
+    const antminerS17Signals = OpenSeadragon({
+      id: "seadragon-viewer",
+      prefixUrl: "https://cdn.jsdelivr.net/npm/openseadragon@3.0.0/build/openseadragon/images/",
+      buildPyramid: false,
+      tileSources: {
+            type: 'image',
+            url:  'https://siasky.net/AAB-yN-ZaHxRBr3XaUMYslot0yZ4REU3DX6PFzxsWi00mw'
+        }
+    });
+  </script>
 
 </body>
 </html>
