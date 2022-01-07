@@ -28,3 +28,17 @@ title = "Reference"
 | BM1396AB       | S17e, T17e                   |
 | BM1397AG/AD/AI | S17, S17+, S17pro, T17, T17+ |
 | BM1398         | S19, S19pro                  |
+
+## UART Signal Description
+
+| Signal | Description         |
+| ------ | ------------------- |
+| CI     | Command Input       |
+| CO     | Command Output      |
+| RST    | Reset signal        |
+| CLKI   | Clock Input         |
+| CLKO   | Clock Output        |
+| RI     | Respond Input       |
+| RO     | Respond Output      |
+| BI     | Respond Busy Input  |
+| BO     | Respond Busy Output |
